@@ -14,7 +14,7 @@ public class KreisVererb extends Point
     public KreisVererb(KreisVererb k)
     {
         x = k.x;
-        y = k.x;
+        y = k.y;
         r = k.r;
     }
 

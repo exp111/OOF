@@ -13,6 +13,11 @@ public class Main
         System.out.println("Increased the radius to 5. Current Radius: " + kreis.getRadius());
         */
 
+        KreisAgg k = new KreisAgg(1, 1, 5);
+        System.out.println(k.toString() + ", V: " + k.flächenInhalt());
+
+        Rechteck r = new Rechteck(1, 1, 3, 5);
+        System.out.println(r.toString() + ", V: " + r.flächenInhalt());
 
     }
 
