@@ -2,7 +2,7 @@ package com.company;
 
 import com.company.Point;
 
-public class Rechteck
+public class Rechteck implements IArea
 {
 	private int w;
 	private int h;
@@ -39,7 +39,7 @@ public class Rechteck
 		return this.w == r.w && this.h == r.h && this.p.equals(r.p);
 	}
 
-	public int flächenInhalt()
+	public double flaechenInhalt()
     {
 		return w * h;
 	}

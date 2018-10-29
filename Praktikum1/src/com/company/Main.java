@@ -13,12 +13,21 @@ public class Main
         System.out.println("Increased the radius to 5. Current Radius: " + kreis.getRadius());
         */
 
+        /*
         KreisAgg k = new KreisAgg(1, 1, 5);
-        System.out.println(k.toString() + ", V: " + k.flächenInhalt());
+        System.out.println(k.toString() + ", V: " + k.flaechenInhalt());
 
         Rechteck r = new Rechteck(1, 1, 3, 5);
-        System.out.println(r.toString() + ", V: " + r.flächenInhalt());
+        System.out.println(r.toString() + ", V: " + r.flaechenInhalt());*/
 
+        IArea[] areas = new IArea[3];
+        areas[0] = new Rechteck(1, 1, 3, 5);
+        areas[1] = new KreisAgg(1, 1, 6);
+        areas[2] = new Rechteck(1, 1, 2, 2);
+        for (int i = 0; i < 3; i++)
+        {
+            System.out.println(areas[i].toString() + ", V: " + areas[i].flaechenInhalt());
+        }
     }
 
     //Prints pascal's triangle

@@ -1,6 +1,6 @@
 package com.company;
 
-public class KreisAgg
+public class KreisAgg implements IArea
 {
 	private int r;
 	private Point p;
@@ -33,7 +33,7 @@ public class KreisAgg
 		return this.r == k.r && this.p.equals(k.p);
 	}
 
-	public double flächenInhalt()
+	public double flaechenInhalt()
     {
 		return Math.PI * this.r * this.r;
 	}
