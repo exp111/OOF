@@ -20,6 +20,7 @@ public class Main
         Rechteck r = new Rechteck(1, 1, 3, 5);
         System.out.println(r.toString() + ", V: " + r.flaechenInhalt());*/
 
+
         IArea[] areas = new IArea[3];
         areas[0] = new Rechteck(1, 1, 3, 5);
         areas[1] = new KreisAgg(1, 1, 6);
@@ -28,6 +29,7 @@ public class Main
         {
             System.out.println(areas[i].toString() + ", V: " + areas[i].flaechenInhalt());
         }
+        //pascalschesDreieck();
     }
 
     //Prints pascal's triangle

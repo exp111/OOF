@@ -6,22 +6,19 @@ public class KreisVererb extends Point
 
     public KreisVererb()
     {
-        x = 0;
-        y = 0;
+        super();
         r = 0;
     }
 
     public KreisVererb(KreisVererb k)
     {
-        x = k.x;
-        y = k.y;
+        super(k);
         r = k.r;
     }
 
     public KreisVererb(int x, int y, int r)
     {
-        this.x = x;
-        this.y = y;
+        super(x, y);
         this.r = r;
     }
     
