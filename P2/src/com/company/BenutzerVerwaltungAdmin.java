@@ -15,10 +15,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung
 
     public boolean benutzerOk(Benutzer benutzer)
     {
-        if (!datenhaltung.contains(benutzer))
-            return false;
-
-        return true;
+        return datenhaltung.contains(benutzer);
     }
 
     /*
