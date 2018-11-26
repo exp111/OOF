@@ -40,7 +40,7 @@ public class Benutzer {
      */
     Benutzer(Benutzer b)
     {
-        this(b.userId, b.passWort);
+        this(b.userId, b.passWort.clone());
     }
 
     /*
