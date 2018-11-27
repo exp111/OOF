@@ -54,7 +54,10 @@ public class Benutzer implements Serializable
     @Override
     public boolean equals(Object o)
     {
-        return equals((Benutzer)o);
+        if (o instanceof Benutzer)
+            return equals((Benutzer)o);
+
+        return this == o;
     }
 
     /*

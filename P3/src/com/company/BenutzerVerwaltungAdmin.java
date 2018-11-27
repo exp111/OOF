@@ -43,6 +43,9 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung
         dbWrite();
     }
 
+    /*
+    * Eine leere Datenhaltung wird erstellt und in einer Datei serialisiert.
+     */
     public void dbInitialisieren()
     {
         datenhaltung = new ArrayList<Benutzer>();
@@ -50,6 +53,9 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung
         dbWrite();
     }
 
+    /*
+    * Deserialisiert das Datenhaltungsobjekt aus einer Datei
+     */
     private void dbRead()
     {
         try {
@@ -59,11 +65,15 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung
             is.close();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch (IOException e) {
+        }catch (IOException e) {
+            dbInitialisieren();
             e.printStackTrace();
         }
     }
 
+    /*
+    * Serialisiert das Datenhaltungsobjekt in eine Datei
+     */
     private void dbWrite()
     {
         try {
@@ -72,6 +82,7 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung
             os.writeObject(datenhaltung);
             os.close();
         } catch (IOException e) {
+            dbInitialisieren();
             e.printStackTrace();
         }
     }

@@ -2,6 +2,9 @@ package com.company;
 
 import junit.framework.TestCase;
 
+/*
+* Tested die BenutzerVerwaltungAdmin Klasse
+ */
 public class BenutzerVerwaltungAdminTest extends TestCase
 {
     Benutzer user1;
@@ -12,6 +15,9 @@ public class BenutzerVerwaltungAdminTest extends TestCase
         super();
     }
 
+    /*
+    * Initiaisiert einen Benutzer user1 und ein BenutzerVerwaltungAdmin admin
+     */
     @Override
     protected void setUp() throws Exception {
         super.setUp();
@@ -21,11 +27,17 @@ public class BenutzerVerwaltungAdminTest extends TestCase
         admin.dbInitialisieren();
     }
 
+    /*
+    * Löscht die Klassen wieder
+     */
     @Override
     protected void tearDown() throws Exception {
         super.tearDown();
     }
 
+    /*
+    * Testet die BenutzerEintragen Funktion und catched BenutzerAlreadyExistsException
+     */
     public void testBenutzerEintragen() {
         try
         {
@@ -47,6 +59,9 @@ public class BenutzerVerwaltungAdminTest extends TestCase
         }
     }
 
+    /*
+    * Testet die BenutzerOk Funktion
+     */
     public void testBenutzerOk()
     {
         assertFalse(admin.benutzerOk(user1));
@@ -62,7 +77,9 @@ public class BenutzerVerwaltungAdminTest extends TestCase
         assertTrue(admin.benutzerOk(user1));
     }
 
-
+    /*
+    * Testet die BenutzerLöschen Funktion und catched die BenutzerNotFoundException.
+     */
     public void testBenutzerLöschen()
     {
         try
