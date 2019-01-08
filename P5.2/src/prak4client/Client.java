@@ -6,11 +6,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import prak4gemklassen.Benutzer;
-import prak4serv.BenutzerVerwaltungAdmin;
+import prak4gemklassen.BenutzerVerwaltungAdmin;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.net.Socket;
 
 import static javafx.application.Application.launch;
 
@@ -140,7 +139,7 @@ public class Client extends Application {
         catch (Exception e)
         {
             // Aussagekräftige Fehlermeldung
-            System.err.print("Fehler beim Eintragen eines Benutzers aufgetreten: " + e.getMessage());
+            System.err.println("Fehler beim Eintragen eines Benutzers aufgetreten: " + e.getMessage());
             return;
         }
 
@@ -168,7 +167,7 @@ public class Client extends Application {
         else
         {
             // Aussagekräftige Fehlermeldung
-            System.err.print("Der Benutzer existiert nicht!");
+            System.err.println("Der Benutzer existiert nicht!");
         }
     }
 
@@ -184,7 +183,7 @@ public class Client extends Application {
         else
         {
             // Aussagekräftige Fehlermeldung
-            System.err.print("Der Benutzer existiert nicht!");
+            System.err.println("Der Benutzer existiert nicht!");
         }
     }
 

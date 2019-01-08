@@ -31,16 +31,16 @@ public class AnmeldungsController
     @FXML
     private void handleButtonEvent()
     {
-        String pw = pwField.getText();
-        String pwRepeat = pwRepeatField.getText();
-        if (!pw.equals(pwRepeat))
-        {
-            userField.setText("Passwort != Wiederholung");
-            return;
-        }
-
-        Benutzer newUser = new Benutzer(userField.getText(), pw.toCharArray());
-
-        client.neuerBenutzer(newUser);
+    String pw = pwField.getText();
+    String pwRepeat = pwRepeatField.getText();
+    if (!pw.equals(pwRepeat))
+    {
+        userField.setText("Passwort != Wiederholung");
+        return;
     }
+
+    Benutzer newUser = new Benutzer(userField.getText(), pw.toCharArray());
+
+    client.neuerBenutzer(newUser);
+}
 }

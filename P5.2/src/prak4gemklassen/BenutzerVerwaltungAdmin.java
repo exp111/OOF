@@ -1,8 +1,7 @@
-package prak4serv;
+package prak4gemklassen;
 
 import java.util.*;
 import java.io.*;
-import prak4gemklassen.*;
 
 public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung
 {

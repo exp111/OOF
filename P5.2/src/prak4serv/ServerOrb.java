@@ -2,7 +2,7 @@ package prak4serv;
 
 import prak4gemklassen.Benutzer;
 import prak4gemklassen.BenutzerAlreadyExistsException;
-import prak4gemklassen.BenutzerNotFoundException;
+import prak4gemklassen.BenutzerVerwaltungAdmin;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
