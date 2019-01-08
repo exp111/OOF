@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="264.0" prefWidth="333.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prak4client.LoginController">
+   <children>
+      <Button fx:id="execButton" layoutX="23.0" layoutY="217.0" mnemonicParsing="false" onAction="#handleButtonEvent" text="Ausführen" />
+      <Label layoutX="27.0" layoutY="85.0" prefHeight="17.0" prefWidth="62.0" text="UserID" />
+      <Label layoutX="27.0" layoutY="129.0" prefHeight="17.0" prefWidth="62.0" text="Passwort" />
+      <PasswordField fx:id="pwField" layoutX="136.0" layoutY="125.0" />
+      <CheckBox layoutX="27.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleNeuAnmeldungCheckboxEvent" text="Neu Anmeldung" />
+      <TextField fx:id="userField" layoutX="136.0" layoutY="81.0" />
+      <CheckBox fx:id="remoteCheckbox" layoutX="160.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleRemoteCheckboxEvent" text="Remote" />
+   </children>
+</AnchorPane>

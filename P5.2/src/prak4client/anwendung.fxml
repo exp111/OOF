@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="178.0" prefWidth="407.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prak4client.AnwendungsController">
+   <children>
+      <Button fx:id="cancelButton" layoutX="14.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="107.0" text="Abbrechen" />
+      <Label layoutX="100.0" layoutY="70.0" text="Sie können das System nun verwenden" />
+   </children>
+</AnchorPane>
