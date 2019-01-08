@@ -21,18 +21,16 @@ public class LoginController
 
     private boolean neuAnmeldung = false;
     private boolean lokal = true;
-    void setLokal(boolean lokal) { this.lokal = lokal; }
+    void setLokal(boolean lokal)
+    {
+        this.lokal = lokal;
+        remoteCheckbox.setSelected(!lokal);
+    }
 
     private Client client;
     void setClient(Client client)
     {
         this.client = client;
-    }
-
-    @FXML
-    public void initialize()
-    {
-        remoteCheckbox.setSelected(!lokal);
     }
 
     /*

@@ -61,7 +61,7 @@ public class ServerOrb {
                     }
                     case 3: // 3 = benutzerOk
                     {
-                        System.out.println("Chceking User:");
+                        System.out.println("Checking User:");
                         Benutzer b = (Benutzer) in.readObject();
                         System.out.println(b.toString());
                         out.writeBoolean(bv.benutzerOk(b));

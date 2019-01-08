@@ -16,10 +16,10 @@ import static javafx.application.Application.launch;
 public class Client extends Application {
     private boolean lokal = true;
     private String address = "127.0.0.1";
-    private ClientOrb clientOrb;
+    private ClientOrb clientOrb; //TODO: generalize admin into the interface and delete this
     private Stage primaryStage;
 
-    private BenutzerVerwaltungAdmin admin;
+    private BenutzerVerwaltungAdmin admin; //TODO: make this a BenutzerVerwaltung
     private boolean initialized = false;
 
     public Client()
@@ -133,7 +133,7 @@ public class Client extends Application {
             }
             else
             {
-                clientOrb.neuerBenutzer(benutzer);
+                clientOrb.benutzerEintragen(benutzer);
             }
         }
         catch (Exception e)

@@ -11,11 +11,23 @@ public class BenutzerVerwaltungAdmin implements BenutzerVerwaltung
     public void benutzerEintragen(Benutzer benutzer) throws BenutzerAlreadyExistsException
     {
         dbRead();
-        if (datenhaltung.contains(benutzer))
+        if (hasUser(datenhaltung, benutzer))
             throw new BenutzerAlreadyExistsException("Benutzer existiert schon in der Datenhaltung!");
 
         datenhaltung.add(benutzer);
         dbWrite();
+    }
+
+    public boolean hasUser(List<Benutzer> datenhaltung, Benutzer benutzer)
+    {
+        for (Benutzer b: datenhaltung)
+        {
+            if (b.userId.equals(benutzer.userId))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean benutzerOk(Benutzer benutzer)

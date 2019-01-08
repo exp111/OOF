@@ -3,13 +3,14 @@ package prak4client;
 import prak4gemklassen.Benutzer;
 import prak4gemklassen.BenutzerAlreadyExistsException;
 import prak4gemklassen.BenutzerNotFoundException;
+import prak4gemklassen.BenutzerVerwaltung;
 import prak4serv.ServerOrb;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
-public class ClientOrb {
+public class ClientOrb implements BenutzerVerwaltung {
     private Socket socket;
     private ObjectOutputStream out;
     private ObjectInputStream in;
@@ -94,7 +95,7 @@ public class ClientOrb {
         Disconnect();
     }
 
-    public void neuerBenutzer(Benutzer benutzer) throws BenutzerAlreadyExistsException
+    public void benutzerEintragen(Benutzer benutzer) throws BenutzerAlreadyExistsException
     {
         if (!sendAndRead(2, benutzer))
         {
